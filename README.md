@@ -97,6 +97,25 @@ A WIP project for go-openapi/v2, with a new infrastructure and new concepts to s
 
 It comes with a few novel ideas such as an infrastructure to work efficiently with JSON documents, new analyzers, new codegen and codegen testing tools.
 
+### json (re-enact)
+
+infrastructure to deal with json documents rather than go types.
+
+* revisit parser
+  * ellided mode, token iterator
+  * ld json
+  * go 1.26 native simd operations
+ 
+* most critical: decoder building api
+* finish json pointer
+
+* json/yaml writer
+  * perhaps improve yaml output
+ 
+# jsonschema
+* unmarshal & validate
+* analyzers:  most complex / most critical
+
 ## uri
 
 A strict, yet fast URI parser.
@@ -140,6 +159,10 @@ k8s operated.
 
 A TUI / headless server (e.g. nvim-like architecture) that performs git assignments of a janitorial nature.
 Since this is really a task scheduler, it may be extended to run coding agents and perform smarter tasks.
+
+This a personal productivity tool
+to help the poor human not being
+relegated to purely adminsitrative tasks in the age of coding agents.
 
 ## benchviz (new)
 
