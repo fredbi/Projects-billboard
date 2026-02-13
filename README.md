@@ -1,4 +1,4 @@
-# -Projects-billboard
+# Projects-billboard
 Ongoing projects - maintained libraries and research projects
 
 ## go-swagger
@@ -91,10 +91,24 @@ Single file fetch / Clone
 
 ## go-experiments
 
+### Transactional rountrip
+
+An experimental transactional gateway
+(think: bank transfer, payments),
+which works with an embedded NATS server.
+
+The point is to prove transactional
+acidity thanks to message protocol only
+and not persistence (database / 2PC).
+
+Other than that, it exposes a few interesting details that leverage other micro-service oriented libraries I've built for config management, db migrations...
+
+k8s operated.
+
 ## git-janitor (new)
 
 A TUI / headless server (e.g. nvim-like architecture) that performs git assignments of a janitorial nature.
-Since this is really a task scheduler, it may be extended to run coding agents and perform less
+Since this is really a task scheduler, it may be extended to run coding agents and perform smarter tasks.
 
 ## benchviz (new)
 
