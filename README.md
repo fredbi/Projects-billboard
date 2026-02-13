@@ -3,9 +3,20 @@ Ongoing projects - maintained libraries and research projects
 
 ## go-swagger
 
+Urgent:
+* repair release workflow
+* docker build issue?
+* ...
+
+Short-term:
+* outsource code scanner to a new go-openapi repo: all the code, tests etc goes there
+* upgrade swag to the new API.
+
 ## go-openapi
 
 A set of libraries to work with OpenAPI.
+
+Q1 2026 (~ March): we freeze many things at v1.0.0. We no longer want v0.x.y here.
 
 ### testify (active Q1 2026)
 A fork of github.com/stretchr/testify (testify/v2) to expose a dependency-free, assertion library with support for generics.
@@ -13,7 +24,8 @@ A fork of github.com/stretchr/testify (testify/v2) to expose a dependency-free, 
 This project pioneereed a few aspects that we want to generalize across our go-openapi repos: doc site, testing patterns, mono-repo releases.
 
 Roadmap:
-* v2.4
+* v2.4: migration tool, no file descriptor leak assertion, versioned doc site
+
 ### strfmt
 Types supporting JSON schema and OpenAPI "format" validations.
 
@@ -51,7 +63,7 @@ The github actions that support our shared CI workflows.
 Roadmap:
 * rewrite complex bash in go
 
-## ci-workflows
+### ci-workflows
 
 Shared worflows from repos / mono-repos
 that folloW go-openapi conventions.
@@ -71,7 +83,7 @@ Roadmap:
 Vision:
 - onboards ai-driven jobs for auto-pilot maintenance
 
-## Other repos
+### Other repos
 spec, validate, runtime...
 
 Keep maintained and in good shape. Most likely closed to new features: bug fixes & security issues only.
@@ -112,7 +124,7 @@ infrastructure to deal with json documents rather than go types.
 * json/yaml writer
   * perhaps improve yaml output
  
-# jsonschema
+### jsonschema
 * unmarshal & validate
 * analyzers:  most complex / most critical
 
@@ -167,3 +179,9 @@ relegated to purely adminsitrative tasks in the age of coding agents.
 ## benchviz (new)
 
 A CLI to swall benchmark results and produce a page with one or several charts, rendering the results following a configurable scenario (HTML/png).
+
+## gooseplus
+
+A smart db migration tool based on the great goose migration, but with extra features.
+
+To be updated, upgraded, and move to auto-maintenance mode.
