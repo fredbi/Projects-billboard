@@ -25,11 +25,18 @@ Plan for v2: yes.
 ### swag
 A bag of tools that support go-openapi.
 
-Tools of interest (will be reintegrated in go-openapi/core when published:
+Tools of interest (will be reintegrated in go-openapi/core when published):
 * JSON adapter
 * is float an integer function
+* name mangler
 
-Plan for v2: no
+Plan for v2: don't know yet
+
+if we publish a v2 it will modt
+likely come a a thin veneer layer
+calling core utilties as only the
+way packages are dispatched would
+differ.
 
 ### gh-actions (active)
 
@@ -40,8 +47,32 @@ The github actions that support our shared CI workflows.
   * wait for jobs
 * bot handling actions:
   * exchange credententials for bot (w/ github app + GPG credentials)
-   
-### Other repos
+
+Roadmap:
+* rewrite complex bash in go
+
+## ci-workflows
+
+Shared worflows from repos / mono-repos
+that folloW go-openapi conventions.
+
+Includes:
+- go test (lint, matrix x6 test,
+  test reports & coverage)
+- fuzz tests (auto-detect)
+- release / mono-repo release
+- vuln scanners
+
+Roadmap:
+* outsource complex bash to go gh-actions
+* share doc site publishing
+* share docker releasing / goreleaser stuff?
+
+Vision:
+- onboards ai-driven jobs for auto-pilot maintenance
+
+## Other repos
+spec, validate, runtime...
 
 Keep maintained and in good shape. Most likely closed to new features: bug fixes & security issues only.
 
