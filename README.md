@@ -24,7 +24,11 @@ A fork of github.com/stretchr/testify (testify/v2) to expose a dependency-free, 
 This project pioneereed a few aspects that we want to generalize across our go-openapi repos: doc site, testing patterns, mono-repo releases.
 
 Roadmap:
-* v2.4: migration tool, no file descriptor leak assertion, versioned doc site
+* [x] v2.4: migration tool, no file descriptor leak assertion
+* [ ] v2.5
+  * [ ] versioned doc site
+  * [ ] go1.25 syntest for async assertions
+  * [] NoFileDescriptorLeak ports for macOS and (perhaps) windows
 
 ### strfmt
 Types supporting JSON schema and OpenAPI "format" validations.
@@ -49,6 +53,12 @@ likely come a a thin veneer layer
 calling core utilties as only the
 way packages are dispatched would
 differ.
+
+### jsonpointer
+
+Roadmap:
+* fix the quirks with struct tags and embeds
+* support Jsonpointer "-" in arrays
 
 ### gh-actions (active)
 
@@ -98,8 +108,14 @@ It adds tools to handle in bulk and make amenable to an AI agent large scans suc
 * test coverage details
 
 Roadmap:
-* test coverage details
-* hunspell bindings w/ WASM
+
+* [x] godoc auto fix
+* [x] markdown auto fix
+* [x] tested by graph
+* [x] test coverage details
+* [x] hunspell bindings w/ WASM
+* [ ] go modules setup expert diagnostic
+* [ ] license headers check
 * binary releases
 * github action integration
 
@@ -123,9 +139,10 @@ infrastructure to deal with json documents rather than go types.
 
 * json/yaml writer
   * perhaps improve yaml output
- 
+* at some point: support jsonpath
+
 ### jsonschema
-* unmarshal & validate
+* unmarshal & validate single pass
 * analyzers:  most complex / most critical
 
 ## uri
@@ -167,27 +184,51 @@ Other than that, it exposes a few interesting details that leverage other micro-
 
 k8s operated.
 
-### tiling (draft)
+### tilings (draft)
 
 An attempt to theoritize on
 Earth tiling schemes
-(e.g PlusCode, geohash, etc)
+(e.g PlusCode, geohash, h3, etc)
 and extract general properties
 and algorithms.
+
+The final objective is to
+figure out some practical
+guidance to construct
+efficient geo-fencing or
+geo-aggregation queries on
+a geodesic datasets.
 
 Trying to explore how to
 BYO efficient tiling schemes
 optimized for your data.
 
+Exploring self-similar tilings,
+gosper island tilings,
+spherical tilings.
+
+Research temporarily halted.
 
 ## git-janitor (soon)
 
 A TUI / headless server (e.g. nvim-like architecture) that performs git assignments of a janitorial nature.
+
 Since this is really a task scheduler, it may be extended to run coding agents and perform smarter tasks.
 
 This a personal productivity tool
 to help the poor human not being
 relegated to purely adminsitrative tasks in the age of coding agents.
+
+I'd like to put in there:
+- automatic exploration of all my local dev space, syncing & rebasing branches, forks and stashes
+- reminders for stale work / uncommited / out-of-sync work peppered around the place
+- centralized alerts for github activity
+  (failed CI, issues, new PRs etc)
+- run problem solving agents to handle
+  not trivial but not-so-smart problems
+  (e.g. rebase, ci job failures ...)
+
+Design phase
 
 ## ripsed (new)
 
@@ -212,7 +253,12 @@ Available as a CLI or as a go library.
 
 ## benchviz (new)
 
-A CLI to swall benchmark results and produce a page with one or several charts, rendering the results following a configurable scenario (HTML/png).
+A CLI to swallow benchmark results and produce a page with one or several charts, rendering the results following a configurable scenario (HTML/png).
+
+Roadmap:
+- scale issues detection
+- support for different scales
+- agent to deal with the tool autonomously.
 
 ## gooseplus
 
