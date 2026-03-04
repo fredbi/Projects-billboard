@@ -277,7 +277,7 @@ different kinds of db migrations.
 
 To be updated, upgraded, and move to auto-maintenance mode.
 
-## go-hunspell (wip)
+## go-hunspell (TODO)
 
 go bindings for hunspell,
 a great spellchecker written
@@ -285,7 +285,7 @@ in C++, using WASM bindings.
 
 Currently a part of go-fred-mcp.
 
-## go-markdownlint
+## go-markdownlint (TODO)
 
 A pure go port of markdownlint
 a great linter for your markdown
@@ -294,5 +294,21 @@ a great linter for your markdown
 Not all rules have been ported
 yet (~ 80%).
 
+## go-mutesting (WIP)
+
+Revive the mutesting approach with go.
+
+Forked from  zimmski/go-mutesting
+Inspired by go-gremlins/gremlins
+
+Experimental approach to fuse the above approaches to generate mutations (AST-node vs token level).
+
+Want to reuse advanced call graph techniques studied with go-fred-mcp (testing vs tested code dependency graph)
+to determine parallel execution paths for independent mutations.
+
+Want to reuse advanced coverage paths analysis studied with go-fred-mcp to prune uncovered mutations (more or less
+already done by gremlin; I think my coverage analysis is more accurate).
+
+Want to experiment with testing static code analysis to preemptively prune uninformative mutations, or undesirable mutations.
 Currently a part of go-fred-mcp.
 
