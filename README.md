@@ -167,7 +167,20 @@ Other than that, it exposes a few interesting details that leverage other micro-
 
 k8s operated.
 
-## git-janitor (new)
+### tiling (draft)
+
+An attempt to theoritize on
+Earth tiling schemes
+(e.g PlusCode, geohash, etc)
+and extract general properties
+and algorithms.
+
+Trying to explore how to
+BYO efficient tiling schemes
+optimized for your data.
+
+
+## git-janitor (soon)
 
 A TUI / headless server (e.g. nvim-like architecture) that performs git assignments of a janitorial nature.
 Since this is really a task scheduler, it may be extended to run coding agents and perform smarter tasks.
@@ -175,6 +188,27 @@ Since this is really a task scheduler, it may be extended to run coding agents a
 This a personal productivity tool
 to help the poor human not being
 relegated to purely adminsitrative tasks in the age of coding agents.
+
+## ripsed (new)
+
+sed without the quirks.
+
+Inspired by ripgrep, a fast, modernized
+version of sed, using pure RE2.
+
+For those like me who have suffered
+from the cognitive load of having
+to remember BRE, ERE, posix or
+not posix and other quote vs not quote
+undue complexites.
+
+Also supports a sed program explainer
+(injecting comments describing
+what sed does) and readable
+command aliases to write
+human-readable sed programs.
+
+Available as a CLI or as a go library.
 
 ## benchviz (new)
 
@@ -184,4 +218,35 @@ A CLI to swall benchmark results and produce a page with one or several charts, 
 
 A smart db migration tool based on the great goose migration, but with extra features.
 
+In particular, I wanted an embedded
+mechanism to simplify the deployments
+of apps with migrations
+without an external pre-deployment
+job.
+
+Other feature: supports db migration
+"lanes" that can map to
+different environments or
+different kinds of db migrations.
+
 To be updated, upgraded, and move to auto-maintenance mode.
+
+## go-hunspell (wip)
+
+go bindings for hunspell,
+a great spellchecker written
+in C++, using WASM bindings.
+
+Currently a part of go-fred-mcp.
+
+## go-markdownlint
+
+A pure go port of markdownlint
+a great linter for your markdown
+(originally written for nodeJS.
+
+Not all rules have been ported
+yet (~ 80%).
+
+Currently a part of go-fred-mcp.
+
