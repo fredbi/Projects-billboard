@@ -34,9 +34,16 @@ Roadmap:
 Types supporting JSON schema and OpenAPI "format" validations.
 
 Roadmap:
-1. Remove dependency to the mongodb driver _without_ introducing a breaking change
-2. Add integration tests to cover compatibility for mongodb and mysql
+- [x] Remove dependency to the mongodb driver _without_ introducing a breaking change
+- [x] Add integration tests to cover compatibility for mongodb and mysql
+
 Plan for v2: yes.
+Candidates for v2:
+- embedded types not redefinitions
+- strict uri validation ( <- fredbi/uri )
+- better interface(s) ( <- instructs codegen & validators)
+- better multi-modules split
+- better options settings (no globals)
 
 ### swag
 A bag of tools that support go-openapi.
@@ -46,9 +53,11 @@ Tools of interest (will be reintegrated in go-openapi/core when published):
 * is float an integer function
 * name mangler
 
-Plan for v2: don't know yet
+Plans for v2: not sure yet
+- mangler is sufficient large to become its own root module
+- mangler revamp to support alternate case as a token separator
 
-if we publish a v2 it will modt
+if we publish a v2 it will most
 likely come a a thin veneer layer
 calling core utilties as only the
 way packages are dispatched would
@@ -60,6 +69,10 @@ Roadmap:
 * fix the quirks with struct tags and embeds
 * support Jsonpointer "-" in arrays
 
+Plans for v2:
+- remain maintained even though
+  this won't be actively used by go-openapi v2
+  
 ### gh-actions (active)
 
 The github actions that support our shared CI workflows.
@@ -294,7 +307,7 @@ a great linter for your markdown
 Not all rules have been ported
 yet (~ 80%).
 
-## go-mutesting (WIP)
+## go-mutesting (WIP) aka go-messmaker
 
 Revive the mutesting approach with go.
 
@@ -311,4 +324,10 @@ already done by gremlin; I think my coverage analysis is more accurate).
 
 Want to experiment with testing static code analysis to preemptively prune uninformative mutations, or undesirable mutations.
 Currently a part of go-fred-mcp.
+
+## Others endeavors
+
+- fork changie to support git notes
+  and ai-driven workflow to build release notes
+- dynamic badge CI, using gists, to show up our "test quality" metric from go-messmaker
 
