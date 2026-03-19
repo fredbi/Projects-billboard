@@ -12,7 +12,9 @@ Urgent:
 
 Short-term:
 * [x] outsource code scanner to a new go-openapi repo: all the code, tests etc goes there
-* upgrade swag to the new API.
+* [ ] fix name conflict issue -1/+1 (cli example)
+* [ ] upgrade swag to the new API
+* [ ] finish complete relint
 
 ## go-openapi
 
@@ -108,6 +110,19 @@ Roadmap:
 Vision:
 - onboards ai-driven jobs for auto-pilot maintenance
 
+### codescan (new)
+
+Outsourced as a lib the code supporting go-swagger generate spec use-case.
+
+- [x] migrate history, initialize module, adapt tests
+- [ ] relint codebase
+- [ ] refactor - pass 1 : remove env / globals
+- [ ] refactor - pass 2 : package layout / internals / layered packages
+- [ ] refactor - pass 3 : abstract capture model (pivot) / render spec v2 artifact
+- [ ] evolve - pass 1 : regexp vs grammar
+- [ ] evolve - pass 2 : iterator patterns
+- [ ] evolve - pass 3 : transitory oai v3 support
+
 ### Other repos
 spec, validate, runtime...
 
@@ -182,6 +197,12 @@ Rationalize maintenance:
 
 A small yet powerful library to fetch resources over git.
 Single file fetch / Clone
+
+## lazygpg (new)
+
+Inspired by lazygit.
+A CLI & TUI to provide a more intuitive
+frontend to gpg.
 
 ## go-experiments
 
@@ -332,4 +353,6 @@ Currently a part of go-fred-mcp.
 - fork changie to support git notes
   and ai-driven workflow to build release notes
 - dynamic badge CI, using gists, to show up our "test quality" metric from go-messmaker
-
+- go-hunspell : wasm bindings for hunspell (from go-fred-mcp)
+- go-analysis : test dependencies : from go-fred-mcp. ast analysis for test call graph as a standalone library
+- go-analysis: coverage analysis as a standalone library (from go-fred-mcp)
