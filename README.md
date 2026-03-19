@@ -4,12 +4,14 @@ Ongoing projects - maintained libraries and research projects
 ## go-swagger
 
 Urgent:
-* repair release workflow
-* docker build issue?
-* ...
+* [x] repair release workflow
+* [x] docker build issue?
+* [x] split examples apart
+* [x] split codescan apart
+* [x] split diff apart
 
 Short-term:
-* outsource code scanner to a new go-openapi repo: all the code, tests etc goes there
+* [x] outsource code scanner to a new go-openapi repo: all the code, tests etc goes there
 * upgrade swag to the new API.
 
 ## go-openapi
