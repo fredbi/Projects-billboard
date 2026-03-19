@@ -33,6 +33,8 @@ Roadmap:
   * [ ] versioned doc site
   * [ ] go1.25 syntest for async assertions
   * [] NoFileDescriptorLeak ports for macOS and (perhaps) windows
+  * [] check leak init() vs sync.Once
+  * [] https://github.com/stretchr/testify/issues/1839#issuecomment-4089623180
 
 ### strfmt
 Types supporting JSON schema and OpenAPI "format" validations.
